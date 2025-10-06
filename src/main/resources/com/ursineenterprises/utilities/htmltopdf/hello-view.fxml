@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ProgressBar?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.ursineenterprises.utilities.htmltopdf.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+<!--    <HBox fx:id="toggleBox" alignment="CENTER" spacing="10.0">-->
+<!--        <Button fx:id="fromZip"  text="From ZIP file" onAction="#onSelectType" />-->
+<!--        <Button fx:id="fromFolder"  text="From folder" onAction="#onSelectType" />-->
+<!--    </HBox>-->
+<!--    <VBox fx:id="zipView" alignment="CENTER" spacing="10.0" visible="false">-->
+<!--        <Label fx:id="zipHeading"/>-->
+<!--        <Button text="Browse..." onAction="#onBrowseButtonClicked"/>-->
+<!--        <Label fx:id="pathToZipLabel" text="No ZIP file selected"/>-->
+<!--    </VBox>-->
+    <VBox fx:id="dirView" alignment="CENTER" spacing="10.0">
+        <Label fx:id="folderHeading"/>
+        <Label fx:id="pathToDirLabel" text="No directory selected"/>
+        <Button text="Browse" onAction="#onBrowseDirectoryPath"/>
+        <ProgressBar fx:id="progressBar" prefWidth="300.0" progress="0"/>
+        <Label fx:id="filesCountLabel"/>
+        <Label fx:id="progressLabel"/>
+    </VBox>
+</VBox>
